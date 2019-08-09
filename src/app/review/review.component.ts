@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
+import { Character, Review } from '../models'
+
 
 @Component({
   selector: 'app-review',
@@ -9,7 +11,20 @@ export class ReviewComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  @Output() review: EventEmitter<Review> = new EventEmitter<Review>();
+  @Input() btnLikeActif = true;
+  @Input() btnDislikeActif = true;
+  
+  like() {
+    this.review.emit(Review.like);
   }
 
-}
+  dislike() {
+    this.review.emit(Review.dislike);
+  }
+
+  ngOnInit() {
+   
+  }
+
+ } 

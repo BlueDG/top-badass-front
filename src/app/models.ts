@@ -1,7 +1,15 @@
 // Ici structures encapsulation des données
 
-interface Character {
+export interface Character {
     pseudo: string,
     score: number,
     photoURL: string
+
 }
+
+export enum Review {
+    like,
+    dislike
+}
+
+

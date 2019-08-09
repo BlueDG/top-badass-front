@@ -1,1 +1,12 @@
-<p>character works!</p>
+<div>
+    <div class="character d-flex justify-content-center align-items-center">
+        <div class="img-container">
+            <img src={{characterPrototype.photoURL}} alt="img" class="img" style="width:auto; height:400px;">
+        </div>
+        <p>Pseudo: {{characterPrototype.pseudo}}</p>
+        <p>Score: {{characterPrototype.score}}</p>
+    </div>
+    <div>
+        <app-review (review)="onVoted($event)" [btnLikeActif]="likeActif" [btnDislikeActif]="dislikeActif"></app-review>
+    </div>
+</div>
