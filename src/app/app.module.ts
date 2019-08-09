@@ -5,12 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { HelloComponent } from './hello/hello.component';
+import { HelloWithNameComponent } from './hello-with-name/hello-with-name.component';
+import { ReviewComponent } from './review/review.component';
+import { CharacterComponent } from './character/character.component';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HelloComponent,
+    HelloWithNameComponent,
+    ReviewComponent,
+    CharacterComponent
   ],
   imports: [
     BrowserModule,
@@ -20,4 +28,6 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
   providers: [],
   bootstrap: [AppComponent]
 })
+
+
 export class AppModule { }
