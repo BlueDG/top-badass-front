@@ -7,6 +7,6 @@
         <p>Score: {{characterPrototype.score}}</p>
     </div>
     <div>
-        <app-review (review)="onVoted($event)" [btnLikeActif]="likeActif" [btnDislikeActif]="dislikeActif"></app-review>
+        <app-review (review)="onVoted($event)" [btn]="disabledBtn1" [btn2]="disabledBtn2"></app-review>
     </div>
 </div>

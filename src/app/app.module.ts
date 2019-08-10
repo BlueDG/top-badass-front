@@ -9,6 +9,7 @@ import { HelloComponent } from './hello/hello.component';
 import { HelloWithNameComponent } from './hello-with-name/hello-with-name.component';
 import { ReviewComponent } from './review/review.component';
 import { CharacterComponent } from './character/character.component';
+import { CharacterListComponent } from './character-list/character-list.component';
 
 
 
@@ -18,7 +19,8 @@ import { CharacterComponent } from './character/character.component';
     HelloComponent,
     HelloWithNameComponent,
     ReviewComponent,
-    CharacterComponent
+    CharacterComponent,
+    CharacterListComponent
   ],
   imports: [
     BrowserModule,

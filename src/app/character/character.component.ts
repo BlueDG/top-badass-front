@@ -20,8 +20,8 @@ export class CharacterComponent implements OnInit {
     pseudo: "Ellen Ripley"
   }
 
-  likeActif = true;
-  dislikeActif = true; 
+  disabledBtn1 = false;
+  disabledBtn2 = false; 
   
 
   onVoted(review: Review) {
@@ -30,18 +30,31 @@ export class CharacterComponent implements OnInit {
     } else if (review == Review.dislike) {
       this.characterPrototype.score--;
     }
+    this.gererActivationBoutons();
   }
 
   gererActivationBoutons() {
-    this.likeActif = this.characterPrototype.score < 10;
-    this.dislikeActif = this.characterPrototype.score > -10;
+    if (this.characterPrototype.score >= 5)
+      this.disabledBtn1 = true;
+    else if (this.characterPrototype.score < 5) {
+      this.disabledBtn1 = false;
+    }
+    if (this.characterPrototype.score <= -5)
+      this.disabledBtn2 = true;
+    else if (this.characterPrototype.score > -5) {
+      this.disabledBtn2 = false;
+    }
+    
   }
+
+
 
   ngOnInit() {
     this.gererActivationBoutons();
     
   } 
 
+  
 
 
 }

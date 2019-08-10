@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
-import { Character, Review } from '../models'
+import { Review } from '../models'
 
 
 @Component({
@@ -12,8 +12,8 @@ export class ReviewComponent implements OnInit {
   constructor() { }
 
   @Output() review: EventEmitter<Review> = new EventEmitter<Review>();
-  @Input() btnLikeActif = true;
-  @Input() btnDislikeActif = true;
+  @Input() btn: boolean;
+  @Input() btn2: boolean;
   
   like() {
     this.review.emit(Review.like);
