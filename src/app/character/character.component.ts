@@ -12,13 +12,13 @@ export class CharacterComponent implements OnInit {
 
   constructor() { }
 
-  @Input() characterProto: Character; 
+  @Input() character: Character; 
   
-  characterPrototype: any = {
+  /* character: any = {
     photoURL: "https://i.pinimg.com/originals/1c/08/89/1c08893b04e0e804df5372e21a42fb28.jpg",
     score: 0,
     pseudo: "Ellen Ripley"
-  }
+  } */
 
   disabledBtn1 = false;
   disabledBtn2 = false; 
@@ -26,22 +26,22 @@ export class CharacterComponent implements OnInit {
 
   onVoted(review: Review) {
     if (review == Review.like) {
-      this.characterPrototype.score++;
+      this.character.score++;
     } else if (review == Review.dislike) {
-      this.characterPrototype.score--;
+      this.character.score--;
     }
     this.gererActivationBoutons();
   }
 
   gererActivationBoutons() {
-    if (this.characterPrototype.score >= 5)
+    if (this.character.score >= 5)
       this.disabledBtn1 = true;
-    else if (this.characterPrototype.score < 5) {
+    else if (this.character.score < 5) {
       this.disabledBtn1 = false;
     }
-    if (this.characterPrototype.score <= -5)
+    if (this.character.score <= -5)
       this.disabledBtn2 = true;
-    else if (this.characterPrototype.score > -5) {
+    else if (this.character.score > -5) {
       this.disabledBtn2 = false;
     }
     

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Character } from '../app/models'
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,7 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'top-badass-front';
-  characterProto: any;
+  characterProto: Character;
+
+  
 }

@@ -1,1 +1,5 @@
-<p>character-list works!</p>
+<div class="row">
+  <div class="col-4" *ngFor=" let obj of CharacterList | paginate: {itemsPerPage:3, currentPage: p }">
+    <app-character [character]=obj></app-character>
+  </div>
+</div>
