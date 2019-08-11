@@ -14,31 +14,26 @@ export class CharacterComponent implements OnInit {
 
   }
 
-  @Input() characterList: Character; 
+  @Input() character: Character; 
   
-    characterProto: any[] = [
-      { 
-        photoURL: "https://i.pinimg.com/originals/1c/08/89/1c08893b04e0e804df5372e21a42fb28.jpg",
-        score: 5,
-        pseudo: "Ellen Ripley"
-      },
-      { 
-        photoURL: "https://i.pinimg.com/originals/1c/08/89/1c08893b04e0e804df5372e21a42fb28.jpg",
-        score: 0,
-        pseudo: "Kyle Reese"
-      },
-      { 
-        photoURL: "https://i.pinimg.com/originals/1c/08/89/1c08893b04e0e804df5372e21a42fb28.jpg",
-        score: 2,
-        pseudo: "John Doe"
-      }
-   
-    ];
+  characterList: any[] = [
+    { 
+      photoURL: "https://i.pinimg.com/originals/1c/08/89/1c08893b04e0e804df5372e21a42fb28.jpg",
+      score: 5,
+      pseudo: "Ellen Ripley"
+    },
+    { 
+      photoURL: "https://i.pinimg.com/originals/1c/08/89/1c08893b04e0e804df5372e21a42fb28.jpg",
+      score: 0,
+      pseudo: "Kyle Reese"
+    },
+    { 
+      photoURL: "https://i.pinimg.com/originals/1c/08/89/1c08893b04e0e804df5372e21a42fb28.jpg",
+      score: 2,
+      pseudo: "John Doe"
+    }
   
-    /*this.characterLst = [
-      {photoURL: "", score: 0, pseudo: "name"},
-      {photoURL: "", score: 1, pseudo: "name"}
-    ]*/
+  ];
 
 
   disabledBtn1 = false;
@@ -47,22 +42,22 @@ export class CharacterComponent implements OnInit {
 
   onVoted(review: Review) {
     if (review == Review.like) {
-      this.characterProto.score++;
+      this.characterList.score++;
     } else if (review == Review.dislike) {
-      this.characterProto.score--;
+      this.characterList.score--;
     }
     this.gererActivationBoutons();
   }
 
   gererActivationBoutons() {
-    if (this.characterProto.score >= 5)
+    if (this.characterList.score >= 5)
       this.disabledBtn1 = true;
-    else if (this.characterProto.score < 5) {
+    else if (this.characterList.score < 5) {
       this.disabledBtn1 = false;
     }
-    if (this.characterProto.score <= -5)
+    if (this.characterList.score <= -5)
       this.disabledBtn2 = true;
-    else if (this.characterProto.score > -5) {
+    else if (this.characterList.score > -5) {
       this.disabledBtn2 = false;
     }
     
