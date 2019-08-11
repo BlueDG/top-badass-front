@@ -12,17 +12,20 @@ export class CharacterComponent implements OnInit {
 
   constructor() { 
     
+    this.characterList = [
+      {photoURL: "", score: 0, pseudo: "name"},
+      {photoURL: "", score: 1, pseudo: "name"}
+    ]
 
   }
 
-  @Input() character: Character; 
+  @Input() characterList: Character[]; 
   
-    characterProto: any = {
+    /*characterProto: any = {
     photoURL: "https://i.pinimg.com/originals/1c/08/89/1c08893b04e0e804df5372e21a42fb28.jpg",
     score: 0,
     pseudo: "Ellen Ripley"
-  } 
-
+    } */
   
   disabledBtn1 = false;
   disabledBtn2 = false; 
