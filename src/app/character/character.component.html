@@ -1,10 +1,10 @@
 <div>
     <div class="character d-flex justify-content-center align-items-center">
         <div class="img-container">
-            <img src={{characterProto.photoURL}} alt="img" class="img" style="width:auto; height:400px;">
+            <img src={{characterList.photoURL}} alt="img" class="img" style="width:auto; height:400px;">
         </div>
-        <p>Pseudo: {{characterProto.pseudo}}</p>
-        <p>Score: {{characterProto.score}}</p>
+        <p>Pseudo: {{characterList.pseudo}}</p>
+        <p>Score: {{characterList.score}}</p>
     </div>
     <div>
         <app-review (review)="onVoted($event)" [btn]="disabledBtn1" [btn2]="disabledBtn2"></app-review>
