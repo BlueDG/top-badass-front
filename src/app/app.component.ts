@@ -9,7 +9,7 @@ import { Character } from '../app/models'
 
 export class AppComponent {
   title = 'top-badass-front';
-  characterProto: Character;
+  character: Character;
 
   
 }
