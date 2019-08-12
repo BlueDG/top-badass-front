@@ -14,9 +14,9 @@ export class CharacterComponent implements OnInit {
 
   }
 
-  @Input() character: Character[] = 
+  @Input() character: Character;
   
-  /*character: Character[] =*/ [
+  public characterList = [
     { 
       photoURL: "https://i.pinimg.com/originals/1c/08/89/1c08893b04e0e804df5372e21a42fb28.jpg",
       score: 5,
@@ -35,6 +35,7 @@ export class CharacterComponent implements OnInit {
   
   ];
 
+  
 
   disabledBtn1 = false;
   disabledBtn2 = false; 
@@ -62,7 +63,6 @@ export class CharacterComponent implements OnInit {
     }
     
   }
-
 
 
   ngOnInit() {
