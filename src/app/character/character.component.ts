@@ -10,13 +10,17 @@ import { Character, Review } from '../models'
 
 export class CharacterComponent implements OnInit {
 
-  constructor() { 
+  photoUrl: string
+  score: number 
+  pseudo: string
 
+  constructor() { 
+    
   }
 
-  @Input() character: Character;
+  @Input() character: Character[] = 
   
-  public characterList = [
+  /*character: Character[] =*/ [
     { 
       photoURL: "https://i.pinimg.com/originals/1c/08/89/1c08893b04e0e804df5372e21a42fb28.jpg",
       score: 5,
@@ -42,11 +46,14 @@ export class CharacterComponent implements OnInit {
   
 
   onVoted(review: Review) {
-    if (review == Review.like) {
-      this.character.score++;
-    } else if (review == Review.dislike) {
-      this.character.score--;
-    }
+    for(let i = 0; i < this.character.length; i++)
+      if (review == Review.like) {
+        this.score = this.character[i].score++;
+        console.log('score :', this.score)
+      } else if (review == Review.dislike) {
+        this.score = this.character[i].score--;
+        console.log('score :', this.score)
+      }
     this.gererActivationBoutons();
   }
 
@@ -63,6 +70,7 @@ export class CharacterComponent implements OnInit {
     }
     
   }
+
 
 
   ngOnInit() {
