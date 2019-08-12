@@ -10,11 +10,16 @@ export class CharacterListComponent implements OnInit {
 
   @Input() characterList: Character;
 
-  constructor() { }
+  test(){
+    console.log(this.characterList)
+  }
 
 
-  ngOnInit() {
+  constructor() { 
 
   }
 
+
+  ngOnInit() {
+  }
 }

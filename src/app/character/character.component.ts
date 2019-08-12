@@ -14,9 +14,9 @@ export class CharacterComponent implements OnInit {
 
   }
 
-  @Input() character: Character; 
+  @Input() character: Character[] = 
   
-  characterList: any[] = [
+  /*character: Character[] =*/ [
     { 
       photoURL: "https://i.pinimg.com/originals/1c/08/89/1c08893b04e0e804df5372e21a42fb28.jpg",
       score: 5,
@@ -42,22 +42,22 @@ export class CharacterComponent implements OnInit {
 
   onVoted(review: Review) {
     if (review == Review.like) {
-      this.characterList.score++;
+      this.character.score++;
     } else if (review == Review.dislike) {
-      this.characterList.score--;
+      this.character.score--;
     }
     this.gererActivationBoutons();
   }
 
   gererActivationBoutons() {
-    if (this.characterList.score >= 5)
+    if (this.character.score >= 5)
       this.disabledBtn1 = true;
-    else if (this.characterList.score < 5) {
+    else if (this.character.score < 5) {
       this.disabledBtn1 = false;
     }
-    if (this.characterList.score <= -5)
+    if (this.character.score <= -5)
       this.disabledBtn2 = true;
-    else if (this.characterList.score > -5) {
+    else if (this.character.score > -5) {
       this.disabledBtn2 = false;
     }
     
