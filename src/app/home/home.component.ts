@@ -15,16 +15,30 @@ export class HomeComponent implements OnInit {
       pseudo: "Ellen Ripley"
     },
     { 
-      photoURL: "https://i.pinimg.com/originals/1c/08/89/1c08893b04e0e804df5372e21a42fb28.jpg",
-      score: 0,
+      photoURL: "https://files.brightside.me/files/news/part_25/256360/13365060-34965455-1111-0-1477637122-0-1477645637-1477645644-650-2-1488295420-650-a11306f2fd-1492090406.jpg",
+      score: 4,
       pseudo: "Kyle Reese"
     },
     { 
-      photoURL: "https://i.pinimg.com/originals/1c/08/89/1c08893b04e0e804df5372e21a42fb28.jpg",
+      photoURL: "https://vignette.wikia.nocookie.net/bladerunner/images/d/de/Deckard.jpg/revision/latest/scale-to-width-down/350?cb=20190318190453",
       score: 2,
-      pseudo: "John Doe"
+      pseudo: "Rick Deckard"
+    },
+    { 
+      photoURL: "http://static.tvgcdn.net/rovi/showcards/feed/370/thumbs/31114370_1300x1733.jpg",
+      score: -2,
+      pseudo: "Johnny Rico"
+    },
+    { 
+      photoURL: "https://vignette.wikia.nocookie.net/hitman/images/6/6b/Agent47HITMAN2016.png/revision/latest/scale-to-width-down/2000?cb=20160709203721",
+      score: 4,
+      pseudo: "47"
+    },
+    { 
+      photoURL: "https://yt3.ggpht.com/a/AGF-l78cRJv2KORMgIEKZmubiOn35hKBINLc5KbfkQ=s900-c-k-c0xffffffff-no-rj-mo",
+      score: 3,
+      pseudo: "Adam Jensen"
     }
-
   ];
 
   constructor() { }
