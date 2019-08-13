@@ -18,26 +18,7 @@ export class CharacterComponent implements OnInit {
     
   }
 
-  @Input() character: Character[] = 
-  
-  /*character: Character[] =*/ [
-    { 
-      photoURL: "https://i.pinimg.com/originals/1c/08/89/1c08893b04e0e804df5372e21a42fb28.jpg",
-      score: 5,
-      pseudo: "Ellen Ripley"
-    },
-    { 
-      photoURL: "https://i.pinimg.com/originals/1c/08/89/1c08893b04e0e804df5372e21a42fb28.jpg",
-      score: 0,
-      pseudo: "Kyle Reese"
-    },
-    { 
-      photoURL: "https://i.pinimg.com/originals/1c/08/89/1c08893b04e0e804df5372e21a42fb28.jpg",
-      score: 2,
-      pseudo: "John Doe"
-    }
-  
-  ];
+  @Input() character
 
   
 
@@ -46,13 +27,10 @@ export class CharacterComponent implements OnInit {
   
 
   onVoted(review: Review) {
-    for(let i = 0; i < this.character.length; i++)
       if (review == Review.like) {
-        this.score = this.character[i].score++;
-        console.log('score :', this.score)
+        this.score = this.character.score++;
       } else if (review == Review.dislike) {
-        this.score = this.character[i].score--;
-        console.log('score :', this.score)
+        this.score = this.character.score--;
       }
     this.gererActivationBoutons();
   }
@@ -77,8 +55,6 @@ export class CharacterComponent implements OnInit {
     this.gererActivationBoutons();
     
   } 
-
-  
 
 
 }

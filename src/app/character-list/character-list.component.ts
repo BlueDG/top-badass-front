@@ -8,11 +8,7 @@ import { Character } from '../models'
 })
 export class CharacterListComponent implements OnInit {
 
-  @Input() characterList: Character;
-
-  test(){
-    console.log(this.characterList)
-  }
+  @Input() characterList: Character[];
 
 
   constructor() { 

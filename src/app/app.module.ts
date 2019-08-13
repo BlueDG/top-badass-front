@@ -10,6 +10,8 @@ import { HelloWithNameComponent } from './hello-with-name/hello-with-name.compon
 import { ReviewComponent } from './review/review.component';
 import { CharacterComponent } from './character/character.component';
 import { CharacterListComponent } from './character-list/character-list.component';
+import { NavComponent } from './nav/nav.component';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -20,7 +22,9 @@ import { CharacterListComponent } from './character-list/character-list.componen
     HelloWithNameComponent,
     ReviewComponent,
     CharacterComponent,
-    CharacterListComponent
+    CharacterListComponent,
+    NavComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
