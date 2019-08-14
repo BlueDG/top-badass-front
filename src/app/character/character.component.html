@@ -1,12 +1,14 @@
-<div>
-    <div class="character d-flex justify-content-center align-items-center">
-        <div class="img-container">
-            <img src={{character.photoURL}} alt="img" class="img" style="width:auto; height:400px;">
+<div class="parent">
+    <section class="section">
+        <div class="character">
+            <div class="img-contaner">
+                <img src={{character.photoURL}} alt="img" class="img" style="width:auto; height:400px;">
+            </div>
+            <p>Name: {{character.pseudo}}</p>
+            <p>Score: {{character.score}}</p>
         </div>
-        <p>Name: {{character.pseudo}}</p>
-        <p>Score: {{character.score}}</p>
-    </div>
-    <div>
-        <app-review (review)="onVoted($event)" [btn]="disabledBtn1" [btn2]="disabledBtn2"></app-review>
-    </div>
+        <div class="backreview">
+            <app-review (review)="onVoted($event)" [btn]="disabledBtn1" [btn2]="disabledBtn2"></app-review>
+        </div>
+    </section>
 </div>

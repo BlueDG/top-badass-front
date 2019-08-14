@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
       pseudo: "47"
     },
     { 
-      photoURL: "https://yt3.ggpht.com/a/AGF-l78cRJv2KORMgIEKZmubiOn35hKBINLc5KbfkQ=s900-c-k-c0xffffffff-no-rj-mo",
+      photoURL: "https://i.pinimg.com/236x/02/b8/3c/02b83c9dc7fb6136c712b679f5595af4--deus-ex-mankind-divided-jensen.jpg",
       score: 3,
       pseudo: "Adam Jensen"
     }
