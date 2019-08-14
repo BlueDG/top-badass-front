@@ -4,6 +4,7 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     background-color: green;
+    margin: 1%;
 }
 
 .section {
@@ -21,16 +22,17 @@
     padding: 20px;
 }
 
-.img-contaner {
+.img-container {
     background-color: blue;
     height: 300px;
     width: 400px;
     
 }
 
-.img-contaner img {
+.img-container img {
     width: 100%;
     height: 100%;
+    object-fit: scale-down;
 }
 
 
