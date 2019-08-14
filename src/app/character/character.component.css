@@ -3,8 +3,8 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    background-color: green;
-    margin: 1%;
+    /*background-color: green;*/
+    margin: 2%;
 }
 
 .section {
