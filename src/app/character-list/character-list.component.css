@@ -4,5 +4,13 @@
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    
+}
+
+.parent-pagination {
+   display: flex;
+   justify-content: center;
+}
+
+.pagination{
+    padding: 1%;
 }

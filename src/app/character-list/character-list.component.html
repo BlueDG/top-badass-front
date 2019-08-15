@@ -1,6 +1,11 @@
 
 <div class="parent">
-    <div *ngFor="let character of characterList" >
+    <div *ngFor="let character of characterList | paginate: {itemsPerPage:3, currentPage: p }" >
         <app-character [character]="character"></app-character>
     </div>
+</div>
+
+
+<div class="parent-pagination">
+    <pagination-controls (pageChange)="p = $event" class="pagination"></pagination-controls>
 </div>
