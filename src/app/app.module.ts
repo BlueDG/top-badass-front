@@ -9,6 +9,7 @@ import { ReviewComponent } from './review/review.component';
 import { CharacterComponent } from './character/character.component';
 import { CharacterListComponent } from './character-list/character-list.component';
 import { HomeComponent } from './home/home.component';
+import { ScorePipe } from './pipes/score.pipe';
 
 
 
@@ -18,7 +19,8 @@ import { HomeComponent } from './home/home.component';
     ReviewComponent,
     CharacterComponent,
     CharacterListComponent,
-    HomeComponent
+    HomeComponent,
+    ScorePipe
   ],
   imports: [
     BrowserModule,

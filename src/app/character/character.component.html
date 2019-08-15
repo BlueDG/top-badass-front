@@ -5,7 +5,7 @@
                 <img src={{character.photoURL}} alt="img" class="img">
             </div>
             <p>Name: {{character.pseudo}}</p>
-            <p>Score: {{character.score}}</p>
+            <p>Score: {{character.score | score}}</p>
         </div>
         <div class="backreview">
             <app-review (review)="onVoted($event)" [btn]="disabledBtn1" [btn2]="disabledBtn2"></app-review>
